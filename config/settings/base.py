@@ -56,6 +56,7 @@ LOCAL_APPS = [
     # custom users app
     'kagong.users.apps.UsersConfig',
     # Your stuff: custom apps go here
+    'kagong.images.apps.ImagesConfig',
 ]
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
