@@ -52,7 +52,9 @@ class LikeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.Like
-        fields = '__all__'
+        fields = (
+            'creator',
+        )
 
 
 class ImageSerializer(serializers.ModelSerializer):
@@ -73,4 +75,12 @@ class ImageSerializer(serializers.ModelSerializer):
             'created_at',
         )
 
+class InputImageSerializer(serializers.ModelSerializer):
 
+    class Meta:
+        model = models.Image
+        fields = (
+            'file',
+            'location',
+            'caption',
+        )
