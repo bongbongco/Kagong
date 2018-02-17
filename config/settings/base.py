@@ -59,6 +59,7 @@ LOCAL_APPS = [
     'kagong.users.apps.UsersConfig',
     # Your stuff: custom apps go here
     'kagong.images.apps.ImagesConfig',
+    'kagong.notifications.apps.NotificationsConfig', # notifications app
 ]
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
