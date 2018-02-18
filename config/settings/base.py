@@ -49,6 +49,7 @@ THIRD_PARTY_APPS = [
     'allauth',  # registration
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
+    'allauth.socialaccount.providers.facebook', # registration
     'rest_framework', # djangorestframework
     'rest_framework.authtoken',
     'taggit', # Tags for the photos
