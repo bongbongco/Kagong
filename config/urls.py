@@ -13,11 +13,13 @@ urlpatterns = [
     # User management
     url(r'^users/', include('kagong.users.urls', namespace='users')),
     url(r'^accounts/', include('allauth.urls')),
+    url(r'^rest-auth/', include('rest_auth.urls')),
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
 
     # Your stuff: custom urls includes go here
     url(r'^images/', include('kagong.images.urls', namespace='images')),
     url(r'^notifications/', include('kagong.notifications.urls', namespace='notifications')),
-    url(r'^api-token-auth/', obtain_jwt_token),
+
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
