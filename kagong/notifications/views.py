@@ -29,4 +29,3 @@ def create_notification(creator, to, notification_type, image=None, comment=None
     )
 
     notification.save()
-    

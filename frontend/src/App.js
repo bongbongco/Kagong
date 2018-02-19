@@ -4,6 +4,8 @@ import styles from './App.scss';
 
 fetch('/notifications/')
 
+
+
 class App extends Component {
   render() {
     return (
