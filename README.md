@@ -29,3 +29,15 @@
 - [x] 23. 회원가입
 - [x] 24. 비밀번호 변경
 - [x] 25. JWT Token 추가
+
+### Connect django & react
+- [x] 1. 프록시 :3000에서 :8000
+- [x] 2. django-cors-headers 설치
+- [x] 3. INSTALLED_APPS에 'corsheaders' 추가
+- [x] 4. MIDDLEWARE의 CommonMiddleware 위에 'corsheaders.middleware.CorsMiddleware 추가
+- [x] 5. CORS_ORIGIN_ALLOW_ALL = True 추가
+- [x] 6. STATICFILES_DIRS 에 "str(ROOT_DIR.path('frontend', 'build', 'static')) 추가
+- [x] 7. kagong 폴더에 views.py 추가
+- [x] 8. 추가한 views.py 에 ReactAppView 클래스 작성
+- [x] 9. ReactAppView 클래스 URL 추가
+
