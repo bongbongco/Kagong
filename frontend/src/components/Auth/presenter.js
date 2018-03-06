@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styles from "./styles.scss"
 import { LoginForm, SignupForm } from "components/AuthForms";
 
@@ -17,30 +18,30 @@ const Auth = (props, context) => (
             <div className={styles.whiteBox}>
                 {props.action === "signup" && (
                     <p>
-                        이미 가입하셨나요?{" "}
+                        {context.t("이미 가입하셨나요?")}{" "}
                         <span
                             className={styles.changeLink}
                             onClick={props.changeAction}
                             >
-                            로그인
+                            {context.t("로그인")}
                         </span>
                     </p>
                 )}
                 {props.action === "login" && (
                     <p className={styles.text}>
-                        아직 가입하지 않으셨나요?{" "}
+                        {context.t("아직 가입하지 않으셨나요?")}{" "}
                         <span
                             className={styles.changeLink}
                             onClick={props.changeAction}
                             >
-                            가입
+                            {context.t("가입")}
                         </span>
                     </p>
                 )}
             </div>
             <div className={styles.appBox}>
                 <span>
-                    앱 설치하기
+                    {context.t("앱 설치하기")}
                 </span>
                 <div className={styles.appstores}>
                     <img
@@ -57,5 +58,8 @@ const Auth = (props, context) => (
     </main>
 );
 
+Auth.contextTypes = {
+    t: PropTypes.func.isRequired
+};
 
 export default Auth;
