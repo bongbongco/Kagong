@@ -28,7 +28,13 @@
         svg {
             margin-right: 10px;
         }
-
+    }
+    .facebook-button{
+        @include blueButton();
+        width:100%;
+        i {
+            margin-right: 10px;
+        }
     }
     .divider{
         text-transform: uppercase;
@@ -60,14 +66,20 @@
     }
 
     .facebook-link{
-        display: flex;
         align-items: center;
         color: #385185;
         justify-content: center;
         margin-bottom: 25px;
         cursor: pointer;
-        svg{
+        border: 0;
+        background-color: white;
+        font-size: $normal-font-size;
+        i {
             margin-right: 5px;
+        }
+        &:focus,
+        &:active{
+            outline: none;
         }
     }
     .forgot-link{
