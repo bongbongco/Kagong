@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"Language: en"
+
+#: src/components/Auth/presenter.js
+msgid "이미 가입하셨나요?"
+msgstr "Have an account?"
+
+#: src/components/Auth/presenter.js
+#: src/components/AuthForms/index.js
+msgid "로그인"
+msgstr "Log in"
+
+#: src/components/Auth/presenter.js
+msgid "아직 가입하지 않으셨나요?"
+msgstr "Don't have an account?"
+
+#: src/components/Auth/presenter.js
+#: src/components/AuthForms/index.js
+msgid "가입"
+msgstr "Sign up"
+
+#: src/components/Auth/presenter.js
+msgid "앱 설치하기"
+msgstr "Get the app"
+
+#: src/components/AuthForms/index.js
+msgid "아이디"
+msgstr "Username"
+
+#: src/components/AuthForms/index.js
+msgid "패스워드"
+msgstr "Password"
+
+#: src/components/AuthForms/index.js
+msgid "혹은"
+msgstr "OR"
+
+#: src/components/AuthForms/index.js
+msgid "페이스북으로 로그인"
+msgstr "Log in with Facebook"
+
+#: src/components/AuthForms/index.js
+msgid "패스워드를 잊었다면"
+msgstr "Forgot password?"
+
+#: src/components/AuthForms/index.js
+msgid "친구들에게 사진과 영상을 공유하세요."
+msgstr "Sign up to see photo and videos from your friends."
+
+#: src/components/AuthForms/index.js
+msgid "전자우편"
+msgstr "Email"
+
+#: src/components/AuthForms/index.js
+msgid "이름"
+msgstr "Full name"
+
+#: src/components/AuthForms/index.js
+msgid "동의 후 가입"
+msgstr "By signing up, you agree to our"
+
+#: src/components/AuthForms/index.js
+msgid "이용약관 및 개인정보 처리방침"
+msgstr "Terms & Privacy Policy"
+
+#: src/components/Footer/index.js
+msgid "카공 정보"
+msgstr "About Us"
+
+#: src/components/Footer/index.js
+msgid "지원"
+msgstr "Support"
+
+#: src/components/Footer/index.js
+msgid "블로그"
+msgstr "Blog"
+
+#: src/components/Footer/index.js
+msgid "홍보"
+msgstr "Press"
+
+#: src/components/Footer/index.js
+msgid "개인정보처리방침"
+msgstr "Privacy"
+
+#: src/components/Footer/index.js
+msgid "약관"
+msgstr "Terms"
+
+#: src/components/Footer/index.js
+msgid "언어"
+msgstr "Language"
