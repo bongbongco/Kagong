@@ -7,6 +7,7 @@ class Container extends Component {
         username: "",
         password: ""
     };
+
     static propTypes = {
         facebookLogin: PropTypes.func.isRequired
     };

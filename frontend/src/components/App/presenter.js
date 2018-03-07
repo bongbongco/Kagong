@@ -8,7 +8,7 @@ import Auth from 'components/Auth';
 
 const App = props => [
 
-    props.isLoggedin ? <PrivateRoutes key={2} /> : <PublicRoutes key={2} />,
+    props.isLoggedIn ? <PrivateRoutes key={2} /> : <PublicRoutes key={2} />,
     <Footer key={3}/>
 ];
 
@@ -16,18 +16,18 @@ App.propTypes = {
     isLoggedIn : PropTypes.bool.isRequired
 };
 
-const PrivateRoutes = props => [
+const PrivateRoutes = props => (
     <Switch>
         <Route key="1" exact path="/" render={() => "feed"} />
-        <Route key="2" exact path="/explore" render={() => "explore"} />
+        <Route key="2" path="/explore" render={() => "explore"} />
     </Switch>
-];
+);
 
-const PublicRoutes  = props => [
+const PublicRoutes  = props => (
     <Switch>
         <Route exact path="/" component={Auth} />
-        <Route exact path="/recover" render={() => "recover password"} />
+        <Route path="/recover" render={() => "recover password"} />
     </Switch>
-];
+); 
 
 export default App;
