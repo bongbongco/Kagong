@@ -29,8 +29,8 @@ const SignupForm = (props, context) => (
                 placeholder={context.t("이름")} 
                 className={formStyles.textInput} 
                 onChange={props.handleInputChange}
-                name="fullname"
-                value={props.fullnameValue}
+                name="name"
+                value={props.nameValue}
             />
             <input type="username" 
                 placeholder={context.t("아이디")} 
@@ -65,7 +65,7 @@ SignupForm.contextTypes = {
 SignupForm.PropTypes = {
     handleInputChange: PropTypes.func.isRequired,
     emailValue: PropTypes.string.isRequired,
-    fullnameValue: PropTypes.string.isRequired,
+    nameValue: PropTypes.string.isRequired,
     usernameValue: PropTypes.string.isRequired,
     passwordValue: PropTypes.string.isRequired,
     handleSubmit: PropTypes.func.isRequired,

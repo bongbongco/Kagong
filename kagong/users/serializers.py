@@ -47,7 +47,7 @@ class SignUpSerializer(RegisterSerializer):
     def get_cleaned_data(self):
 
         return {
-            'name': self.validate_data.get('name', ''),
+            'name': self.validated_data.get('name', ''),
             'username': self.validated_data.get('username', ''),
             'password1': self.validated_data.get('password1', ''),
             'email': self.validated_data.get('email', '')
@@ -57,7 +57,7 @@ class SignUpSerializer(RegisterSerializer):
         
         adapter = get_adapter()
         user = adapter.new_user(request)
-        self.cleaned_data = self.get_cleand_data()
+        self.cleaned_data = self.get_cleaned_data()
         adapter.save_user(request, user, self)
         setup_user_email(request, user, [])
         user.save()
