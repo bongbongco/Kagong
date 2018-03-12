@@ -31,14 +31,15 @@ function getFeed() {
             }
             return response.json();
         })
-        .then(json => dispatch(setFeed(json)));
+        .then(json => {
+            dispatch(setFeed(json));
+        });
     };
 }
 
 // initial state
 
-const initialState = {
-};
+const initialState = {};
 
 // reducer
 
@@ -65,7 +66,7 @@ function applySetFeed(state, action) {
 
 const actionCreators = {
     getFeed
-}
+};
 
 export { actionCreators };
 

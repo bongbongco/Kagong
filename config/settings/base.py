@@ -45,7 +45,6 @@ DJANGO_APPS = [
     'django.contrib.admin',
 ]
 THIRD_PARTY_APPS = [
-    'crispy_forms',  # Form layouts
     'allauth',  # registration
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
@@ -64,7 +63,7 @@ LOCAL_APPS = [
     # custom users app
     'kagong.users.apps.UsersConfig',
     # Your stuff: custom apps go here
-    'kagong.images.apps.ImagesConfig',
+    'kagong.images.apps.ImagesConfig', # images app
     'kagong.notifications.apps.NotificationsConfig', # notifications app
 ]
 
@@ -185,9 +184,6 @@ TEMPLATES = [
         },
     },
 ]
-
-# See: http://django-crispy-forms.readthedocs.io/en/latest/install.html#template-packs
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # STATIC FILE CONFIGURATION
 # ------------------------------------------------------------------------------
@@ -313,10 +309,12 @@ SOCIALACCOUNT_PROVIDERS = {
         'FIELDS': [
             'id',
             'email',
+            'name',
             'first_name',
             'last_name',
             'verified',
             'locale',
+            'timezone',
             'link',
             'gender',
             'updated_time',
