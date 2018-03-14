@@ -57,7 +57,7 @@ function likePhoto(photoId){
     return (dispatch, getState) => {
         dispatch(doLikePhoto(photoId))
         const { user: { token } } = getState();
-        fetch(`/images/${photoId}/likes`, {
+        fetch(`/images/${photoId}/likes/`, {
             method: "POST",
             headers: {
                 Authorization: `JWT ${token}`
@@ -77,7 +77,7 @@ function unlikePhoto(photoId){
     return (dispatch, getState) => {
         dispatch(doUnlikePhoto(photoId))
         const { user: { token } } = getState()
-        fetch(`/images/${photoId}/unlikes`, {
+        fetch(`/images/${photoId}/unlikes/`, {
             method: "DELETE",
             headers: {
                 Authorization: `JWT ${token}`
