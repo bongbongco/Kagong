@@ -6,7 +6,7 @@ const UserRow = (props, context) => (
     <div className={styles.container}>
         <div className={styles.column}>
             <img
-                src={props.profile_image || require("images/noPhoto.jpg")}
+                src={props.user.profile_image || require("images/noPhoto.jpg")}
                 alt={props.user.username}
                 className={props.big ? styles.bigAvatar : styles.avatar}
             />
@@ -20,8 +20,8 @@ const UserRow = (props, context) => (
             </div>
         </div>
         <span className={styles.column}>
-            <button classsName={styles.button}>
-                {context.t("팔로우")}
+            <button className={styles.button} onClick={props.handleClick}>
+                {props.user.following ? context.t("언 팔로우") : context.t("팔로우")}
             </button>
         </span>
     </div>
@@ -33,11 +33,14 @@ UserRow.contextTypes = {
 
 UserRow.propTypes = {
     user: PropTypes.shape({
+        id: PropTypes.number.isRequired,
         profile_image: PropTypes.string,
         username: PropTypes.string.isRequired,
-        name: PropTypes.string
+        name: PropTypes.string,
+        following: PropTypes.bool.isRequired
     }).isRequired,
-    big: PropTypes.bool
+    big: PropTypes.bool,
+    handleClick: PropTypes.func.isRequired
 };
 
 UserRow.defaultProps = {
