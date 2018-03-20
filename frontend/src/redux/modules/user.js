@@ -9,6 +9,7 @@ const FOLLOW_USER = "FOLLOW_USER";
 const UNFOLLOW_USER = "UNFOLLOW_USER";
 const SET_EXPLORE = "SET_EXPLORE";
 const SET_IMAGE_LIST = "SET_IMAGE_LIST";
+const SET_PROFILE = "SET_PROFILE";
 
 // action creators
 
@@ -46,13 +47,6 @@ function setUnfollowUser(userId){
     };
 }
 
-function setExplore(userList) {
-    return {
-        type: SET_EXPLORE,
-        userList
-    };
-}
-
 function setImageList(imageList){
     return {
         type: SET_IMAGE_LIST,
@@ -60,6 +54,12 @@ function setImageList(imageList){
     }
 }
 
+function setProfile(userInfo){
+    return {
+        type: SET_PROFILE,
+        userInfo
+    }
+}
 // API actions
 
 function facebookLogin(access_token){
@@ -254,6 +254,23 @@ function searchImages(token, searchTerm){
     .then(json => json);
 }
 
+function getProfile(username){
+    return (dispatch, getState) => {
+        const { user: { token } } = getState();
+        fetch(`/users/${username}/`, {
+            headers: {
+                Authorization: `JWT ${token}`,
+            }
+        })
+        .then(response => {
+            if(response.status === 401){
+                dispatch(logout());
+            }
+            return response.json();
+        })
+        .then(json => dispatch(setProfile(json))); 
+    }
+}
 
 // initial state
 
@@ -280,6 +297,8 @@ function reducer(state=initialState, action) {
             return applySetExplore(state, action);
         case SET_IMAGE_LIST:
             return applySetImageList(state, action);
+        case SET_PROFILE:
+            return applySetProfile(state, action);
         default:
             return state;
     }
@@ -352,6 +371,13 @@ function applySetImageList(state, action){
     }
 }
 
+function applySetProfile(state, action){
+    const { userInfo } = action;
+    return {
+        ...state,
+        userInfo
+    };
+}
 // export
 
 const actionCreators = {
@@ -363,7 +389,8 @@ const actionCreators = {
     followUser,
     unfollowUser,
     getExplore,
-    searchByTerm
+    searchByTerm,
+    getProfile
 };
 
 export { actionCreators };

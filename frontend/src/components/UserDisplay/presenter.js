@@ -41,8 +41,8 @@ UserDisplay.propTypes = {
     }).isRequired,
     big: PropTypes.bool,
     handleClick: PropTypes.func.isRequired,
-    horizontal: PropTypes.bool.isRequired,
-    vertical: PropTypes.bool.isRequired
+    horizontal: PropTypes.bool,
+    vertical: PropTypes.bool
 };
 
 UserDisplay.defaultProps = {

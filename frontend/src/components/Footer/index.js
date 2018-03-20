@@ -8,10 +8,8 @@ const Footer = (props, context) => (
         <div className={styles.column}>
             <nav className={styles.nav}>
                 <ul className={styles.list}>
-                    <li className={styles.listItem}>{context.t("카공 정보")}</li>
-                    <li className={styles.listItem}>{context.t("지원")}</li>
+                    <li className={styles.listItem}>{context.t("지금 여기 정보")}</li>
                     <li className={styles.listItem}>{context.t("블로그")}</li>
-                    <li className={styles.listItem}>{context.t("홍보")}</li>
                     <li className={styles.listItem}>{context.t("개인정보처리방침")}</li>
                     <li className={styles.listItem}>{context.t("약관")}</li>
                     <li className={styles.listItem}>{context.t("언어")}</li>
@@ -19,7 +17,7 @@ const Footer = (props, context) => (
             </nav>
         </div>
         <div className={styles.column}>
-            <span className={styles.copyright}>© 2018 Kagong</span>
+            <span className={styles.copyright}>© 2018 Bongbongco</span>
         </div>
     </footer>
 );

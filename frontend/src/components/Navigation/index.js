@@ -12,3 +12,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 };
 
 export default connect(null, mapDispatchToProps)(Container);
+

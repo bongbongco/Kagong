@@ -8,7 +8,7 @@ class Container extends Component {
         term: ""
     };
     static propTypes = {
-        goToSearch: PropTypes.func.isRequired
+        goToSearch: PropTypes.func.isRequired,
     }
     render() {
         const { term } = this.state;

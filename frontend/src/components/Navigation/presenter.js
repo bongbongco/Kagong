@@ -4,7 +4,6 @@ import Ionicon from "react-ionicons";
 import { Link } from "react-router-dom";
 import styles from "./styles.scss";
 
-
 const Navigation = (props, context) => ( 
     <div className={styles.navigation}>
         <div className={styles.inner}>
@@ -38,7 +37,7 @@ const Navigation = (props, context) => (
                         <Ionicon icon="ios-heart-outline" fontSize="28px" color="black" />
                 </div>
                 <div className={styles.navIcon}>
-                    <Link to="/profile">
+                    <Link to="/users/seungyong">
                         <Ionicon icon="ios-person-outline" fontSize="32px" color="black" />
                     </Link>
                 </div>
