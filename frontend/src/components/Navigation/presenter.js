@@ -37,7 +37,7 @@ const Navigation = (props, context) => (
                         <Ionicon icon="ios-heart-outline" fontSize="28px" color="black" />
                 </div>
                 <div className={styles.navIcon}>
-                    <Link to="/users/seungyong">
+                    <Link to="/users/bongbongco">
                         <Ionicon icon="ios-person-outline" fontSize="32px" color="black" />
                     </Link>
                 </div>

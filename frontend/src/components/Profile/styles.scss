@@ -1,74 +1,91 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-    @include breakpoint("phone") {
-        margin-bottom: 0;
-    }
-    .section {
+.profile{
+    .container {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        margin-bottom: 45px;
-        .column {
-            display: flex;
-            flex-direction: column;
-            .photo {
-                width: 153px;
-                height: 153px;
-                border-radius: 50%;
-                margin-left: 53px;
-                margin-right: 100px;
-                margin-bottom: 25px;
-            }
-            .row {
-                display: flex;
-                margin-bottom: 20px;
-                align-items: center;
-                .user-id {
-                    font-size: 32px;
-                    font-weight: 100;
-                    margin-right: 20px;
-                }
-                .button {
-                    @include boxBorder(yes);
-                    font-size: $normal-font-size;
-                    font-weight: 600;
-                    padding: 3px 25px;
-                    margin-right: 10px;
-                    background-color:#fafafa; 
-                    cursor: pointer;
-                    &:focus,
-                    &:active {
-                        outline: none;
-                    }
-                    &:active {
-                        opacity: 0.3;
-                    }
-                }
-                .icon {
-                    cursor: pointer;
-                    &:active {
-                        opacity: 0.3;
-                    }
-                }
-                .data {
-                    font-size: $big-font-size;
-                    margin-right: 40px;
-                }
-                .userName {
-                    font-size: $big-font-size;
-                    font-weight: 600;
-                }
-            }
+        width: 100%;
+        box-sizing: border-box;
+        @include breakpoint("phone") {
+            margin-bottom: 0;
         }
-        .menu {
-            font-weight: 600;
-            font-size: $normal-font-size;
-            &:first-child{
-                margin-right: 65px;
+        .section {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 45px;
+            .column {
+                display: flex;
+                flex-direction: column;
+                .photo {
+                    width: 153px;
+                    height: 153px;
+                    border-radius: 50%;
+                    margin-left: 53px;
+                    margin-right: 100px;
+                    margin-bottom: 25px;
+                }
+                .row {
+                    display: flex;
+                    margin-bottom: 20px;
+                    align-items: center;
+                    .user-id {
+                        font-size: 32px;
+                        font-weight: 100;
+                        margin-right: 20px;
+                    }
+                    .button {
+                        @include boxBorder(yes);
+                        font-size: $normal-font-size;
+                        font-weight: 600;
+                        padding: 3px 25px;
+                        margin-right: 10px;
+                        background-color:#fafafa; 
+                        cursor: pointer;
+                        &:focus,
+                        &:active {
+                            outline: none;
+                        }
+                        &:active {
+                            opacity: 0.3;
+                        }
+                    }
+                    .icon {
+                        cursor: pointer;
+                        &:active {
+                            opacity: 0.3;
+                        }
+                    }
+                    .data {
+                        font-size: $big-font-size;
+                        margin-right: 40px;
+                    }
+                    .userName {
+                        font-size: $big-font-size;
+                        font-weight: 600;
+                    }
+                }
+            }
+            .activity {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .title {
+                    display: flex;
+                    flex-direction: row;
+                    .menu {
+                        font-weight: 600;
+                        font-size: $normal-font-size;
+                        &:first-child {
+                            margin-right: 60px;
+                        }
+                    }
+                }
+                .photo {
+                    display: flex;
+                    width: 50%;
+                    height: 50%;
+
+                }
             }
         }
     }
