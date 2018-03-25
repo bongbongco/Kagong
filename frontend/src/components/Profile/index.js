@@ -11,10 +11,9 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-    const { match: { params: { username } } } = ownProps;
     return {
         getProfile: () => {
-            dispatch(userActions.getProfile(username));
+            dispatch(userActions.getProfile());
         }
     };
 };

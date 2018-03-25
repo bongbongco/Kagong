@@ -13,14 +13,16 @@
             flex-direction: row;
             align-items: center;
             margin-bottom: 45px;
+            position: relative;
             .column {
                 display: flex;
                 flex-direction: column;
+                align-items: center;
                 .photo {
                     width: 153px;
                     height: 153px;
                     border-radius: 50%;
-                    margin-left: 53px;
+                    margin-left: 0;
                     margin-right: 100px;
                     margin-bottom: 25px;
                 }
@@ -72,19 +74,23 @@
                 .title {
                     display: flex;
                     flex-direction: row;
+                    align-items: center;
+                    margin-bottom: 60px;
                     .menu {
                         font-weight: 600;
                         font-size: $normal-font-size;
-                        &:first-child {
-                            margin-right: 60px;
-                        }
                     }
                 }
                 .photo {
+                    margin: 0;
+                    padding: 0;
                     display: flex;
-                    width: 50%;
-                    height: 50%;
-
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    box-sizing: border-box;
+                    border: solid 0px black;
                 }
             }
         }

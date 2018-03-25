@@ -5,7 +5,8 @@ import Navigation from "./presenter";
 
 class Container extends Component {
     state = {
-        term: ""
+        term: "",
+        seeingAlarms: false
     };
     static propTypes = {
         goToSearch: PropTypes.func.isRequired,
@@ -16,6 +17,8 @@ class Container extends Component {
             <Navigation 
                 onSubmit={this._onSubmit} 
                 onInputChange={this._onInputChange} 
+                openAlarms={this._openAlarms}
+                closeAlarms={this._closeAlarms}
                 value={term} 
             />
         );
@@ -33,6 +36,16 @@ class Container extends Component {
         goToSearch(term);
         this.setState({
             term: ""
+        });
+    };
+    _openAlarms = () => {
+        this.setState({
+            seeingAlarms: true
+        });
+    };
+    _closeAlarms = () => {
+        this.setState({
+            seeingAlarms: false
         });
     };
 }

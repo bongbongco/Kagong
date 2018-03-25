@@ -11,11 +11,15 @@
     &:last-child {
         margin-bottom: 0;
     }
+    img {
+        max-width: $max-card-width;
+    }
     .header {
         padding: 15px;
         display: flex;
         align-items: center;
         border-bottom: 1px solid $border-color;
+        height: 30px;
         .image {
             width: 30px;
             border-radius: 50%;

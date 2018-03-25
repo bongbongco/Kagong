@@ -6,7 +6,7 @@
     padding: 10px 16px;
     width: 100%;
     box-sizing: border-box;
-    border-bottom: 1px solid $light-grey;
+    border-bottom: 1px solid #EFEFEF;
 
     @include breakpoint("phone-tablet"){
         border-bottom: 0;

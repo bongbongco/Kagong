@@ -26,17 +26,9 @@ const Profile = (props, context) => {
                                 <span className={styles.menu}>
                                     {"게시물"}
                                 </span>
-                                <span className={styles.menu}>
-                                    {"저장됨"}
-                                </span>
                             </div>
                             <div className={styles.photo}>
                                 <UserActivity
-                                    images={props.images}
-                                />
-                            </div>
-                            <div className={styles.photo}>
-                                <SavedPhoto
                                     images={props.images}
                                 />
                             </div>
@@ -54,7 +46,7 @@ const UserInformation = (props, context) => (
             <img
                 src={props.profile_image || require("images/noPhoto.jpg")}
                 className={styles.photo}
-                alt={"profile photo"}
+                alt={"profile"}
             />
         </div>
         <div className={styles.column}>
@@ -102,14 +94,6 @@ const UserActivity = props =>
         <PhotoDisplay photo={photo} key={photo.id} />
         )
     );
-
-
-const SavedPhoto = props => 
-    props.images.map(photo => (
-        <PhotoDisplay photo={photo} key={photo.id} />
-        )
-    );
-
 
 UserInformation.propTypes = {
     username: PropTypes.string.isRequired,

@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import Ionicon from "react-ionicons";
 import { Link } from "react-router-dom";
 import styles from "./styles.scss";
+import Alarms from "components/Alarms";
+
 
 const Navigation = (props, context) => ( 
     <div className={styles.navigation}>
@@ -35,9 +37,14 @@ const Navigation = (props, context) => (
                 </div>
                 <div className={styles.navIcon}>
                         <Ionicon icon="ios-heart-outline" fontSize="28px" color="black" />
+                        {props.seeingAlarms && 
+                            <Alarms 
+                                closeAlarms={props.closeAlarms}
+                            />
+                        }
                 </div>
                 <div className={styles.navIcon}>
-                    <Link to="/users/bongbongco">
+                    <Link to="/profile/">
                         <Ionicon icon="ios-person-outline" fontSize="32px" color="black" />
                     </Link>
                 </div>

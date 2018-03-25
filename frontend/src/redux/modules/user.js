@@ -1,4 +1,5 @@
 // import
+import jwtDecode from "jwt-decode";
 
 // actions
 
@@ -254,10 +255,11 @@ function searchImages(token, searchTerm){
     .then(json => json);
 }
 
-function getProfile(username){
+function getProfile(){
     return (dispatch, getState) => {
         const { user: { token } } = getState();
-        fetch(`/users/${username}/`, {
+        var decode_token = jwtDecode(token);
+        fetch(`/users/${decode_token.username}/`, {
             headers: {
                 Authorization: `JWT ${token}`,
             }
