@@ -12,6 +12,9 @@
     }
     .column{
         width: 40%;
+        img {
+            width: 100%;
+        }
         @include breakpoint("phone") {
             &:first-child {
                 display: none;
@@ -41,8 +44,11 @@
             align-items:center;
             margin-top: 35px;
             .appstores{
+                display: flex;
+
                 margin-top: 25px;
                 img{
+                    width: 136px;
                     height: 40px;
                     &:first-child {
                         margin-right: 10px;
@@ -71,6 +77,7 @@
             padding: 0 40px;
             padding-top: 30px;
             img{
+                width: 100px;
                 height: 60px;
             }
         }
